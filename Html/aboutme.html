@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Rami Chaaben</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/383e503e4a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../images/logo IIT.png" class="logo">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="aboutme.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="../images/profile.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p> I'm an enthusiastic, responsible
+                            and hard-working IT person.
+                            Working on different projects
+                            helped me to adapt to changes
+                            quickly and made me a mature
+                            team worker. I am able to work
+                            well both in a team environment
+                            as well as using my own initiative.
+                            I can work well under pressure
+                            and adhere to strict deadlines.</p>
+                        <div class="tab-title">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experince')">Licenses & certifications</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Html,Css,Js,Php </span> <br> Web Development</li>
+                                <li><span>Unity,C#</span> <br> Video-game Development</li>
+                                <li><span>Blender 3D</span> <br> 3D Design And Animation</li>
+                                <li><span>Adobe Premier,Adobe Photoshop</span> <br> Graphic Design And Video Montage</li>
+                                <li><span>Java,Python,Android Studio</span> <br> </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experince">
+                            <ul>
+                                <li><span>License In Computer Science And Multimedia</span> <br> ISIMS</li>
+                                <li><span>Software Engineering: Modeling Software Systems using UML</span> <br> Unified Modeling Language (UML)</li>
+                                <li><span>Introduction to C# Programming and Unity</span> <br> C# & Unity</li>
+                                <li><span>The Fundamentals Of Video Editing</span> <br> Adobe Premiere Pro</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Lycee Abou Kacem Chebbi</span> <br> 2018-2021</li>
+                                <li><span>Higher Institute of Computer Science and Multimedia of Sfax(ISIMS)</span> <br> 2022-2024</li>
+                                <li><span>International Institute of Technology(IIT)</span> <br> 2024-Now</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Rami Chaaben</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/383e503e4a.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("VwRTllPbrTfGnSxKn");
+        })();
+    </script>
+    <script>
+        function SendMail() {
+    var params = {
+        form_name: document.getElementById("fullName").value,
+        email_id: document.getElementById("email_id").value,
+        message: document.getElementById("message").value
+    };
+
+    emailjs.send("service_rkn8x2l", "template_5usaodi", params)
+        .then(function (response) {
+            alert("Message sent successfully!");
+            console.log('SUCCESS!', response.status, response.text);
+        }, function (error) {
+            alert("Failed to send the message. Please check the console for more details.");
+            console.error('FAILED...', error);
+        });
+
+    return false; // Prevent form default submission
+}
+
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../images/logo IIT.png" class="logo">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="aboutme.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="contact"> <br><br><br><br>
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1 class="sub-title">Contact Me</h1>
+                            <p><i class="fa-solid fa-paper-plane"></i>ramichaabensocial@gmail.com</p>
+                            <p><i class="fa-solid fa-phone"></i>+21999599740</p>
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/gamesmemesP"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://x.com/shma9ma9"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/in/ramichaaben/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://github.com/Gamesmemes"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-right">
+                            <form onsubmit="return SendMail()">
+                                <input type="text" id="fullName" name="Name" placeholder="Your Name" required>
+                                <input type="email" name="email" id="email_id" placeholder="Your Email" required>
+                                <textarea id="message" name="Message" rows="6" placeholder="Your Message" required></textarea>
+                                <button type="submit" class="btn-submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
